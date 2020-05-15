@@ -77,8 +77,6 @@ certificateAuthorities:
     url: http://localhost:7054
     httpOptions:
       verify: false
-    tlsCACerts:
-      path: networks/fabric/basic-network/crypto-config/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
     registrar:
       - enrollId: admin
         enrollSecret: adminpw
