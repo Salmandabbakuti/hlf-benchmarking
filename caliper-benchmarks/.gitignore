@@ -1,0 +1,28 @@
+# Git Ignore file
+.idea/
+launch.json
+
+# No logs
+*.log
+/log
+
+# No html
+*.html
+
+# No mac files
+.DS_Store
+
+# No npm runtime artifacts
+node_modules/*
+package-lock.json
+package.json
+
+src/fabric/samples/fabcar/java
+
+# No config updates
+networks/fabric/config_kafka/crypto-config
+networks/fabric/config_raft/crypto-config
+networks/fabric/config_solo/crypto-config
+networks/fabric/config_solo_raft/crypto-config
+
+**/__pycache__/**
