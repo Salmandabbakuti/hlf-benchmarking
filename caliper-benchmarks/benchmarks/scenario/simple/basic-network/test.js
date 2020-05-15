@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports.info = 'Adding Owner';
-const { v1: uuidv4 } = require('uuid');
-
 let txnPerBatch;
 let bc, contx;
 module.exports.init = function (blockchain, context, args) {
@@ -23,7 +21,7 @@ function generateWorkload() {
 
         workload.push({
             chaincodeFunction: 'registerOwner',
-            chaincodeArguments: [uuidv4(), "salmandev", "12345", "dev"],
+            chaincodeArguments: ["salmandev", "12345", "dev"],
         });
     }
     return workload;
