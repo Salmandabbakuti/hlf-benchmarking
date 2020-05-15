@@ -61,16 +61,12 @@ orderers:
     url: grpc://localhost:7050
     grpcOptions:
       ssl-target-name-override: orderer.example.com
-    tlsCACerts:
-      path: networks/fabric/basic-network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 peers:
   peer0.org1.example.com:
     url: grpc://localhost:7051
     grpcOptions:
       ssl-target-name-override: peer0.org1.example.com
       grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-      path: networks/fabric/basic-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
 certificateAuthorities:
   ca.example.com:
