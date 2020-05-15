@@ -10,8 +10,8 @@ services:
     command: launch master
     environment:
       - CALIPER_BIND_SUT=fabric:1.4.4
-      - CALIPER_BENCHCONFIG=benchmarks/scenario/simple/basic-network/config.yaml
-      - CALIPER_NETWORKCONFIG=networks/fabric/basic-network/network-config.yaml
+      - CALIPER_BENCHCONFIG=benchmarks/config.yaml
+      - CALIPER_NETWORKCONFIG=networks/network-config.yaml
     volumes:
-      - ./caliper-benchmarks:/hyperledger/caliper/workspace
+      - ./caliper:/hyperledger/caliper/workspace
     network_mode: host
