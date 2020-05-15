@@ -1,0 +1,27 @@
+---
+test:
+  name: Benchmark-test
+  description:
+    This is an example benchmark for caliper, to test the backend DLT's
+    performance with simple invoking & querying transactions.
+  workers:
+    type: local
+    number: 2
+  rounds:
+    - label: open
+      description: Test description for the opening of an account through the deployed chaincode
+      txNumber: 300
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      arguments:
+        money: 100
+      callback: benchmarks/mycc/test.js
+monitor:
+  type:
+    - docker
+  docker:
+    name:
+      - all
+  interval: 1
